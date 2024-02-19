@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.block{
+    @apply m-2 bg-gray-100 aspect-square border rounded bg-center bg-contain bg-no-repeat;
+}
+
+.block-empty{
+    @apply bg-gray-100;
+}
+
+.block-x{
+    @apply bg-blue-50;
+    background-image: url("../img/x.svg");
+}
+
+.block-o{
+    @apply bg-red-50;
+    background-image: url("../img/o.svg");
+}
