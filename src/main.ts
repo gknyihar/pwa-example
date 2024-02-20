@@ -1,3 +1,8 @@
 import '../resources/css/app.css'
+import * as $ from 'jquery'
+import Game from './game';
 
-console.log('Hello world')
+$(document).ready(() => {
+    let game = new Game($('#game'));
+});
+
