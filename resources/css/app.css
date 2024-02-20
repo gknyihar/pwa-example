@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    @apply w-screen h-screen bg-gray-50 flex flex-col space-y-1 justify-between items-center p-5;
+}
+
+#game-header>h1{
+    @apply text-2xl font-bold text-center text-blue-900;
+}
+
+#game-status{
+    @apply flex items-center justify-center space-x-2;
+}
+
+#game-status>button{
+    @apply rounded border px-2 border-blue-900 font-bold bg-blue-50 text-blue-700 hover:bg-blue-100;
+}
+
+#game-body{
+    @apply w-full flex flex-col items-center space-y-2;
+}
+
+#game-board{
+    @apply w-full aspect-square border rounded grid grid-cols-3 max-w-[500px] max-h-[500px];
+}
+
+
 .block{
     @apply m-2 bg-gray-100 aspect-square border rounded bg-center bg-contain bg-no-repeat;
 }
@@ -18,4 +43,8 @@
 .block-o{
     @apply bg-red-50;
     background-image: url("../img/o.svg");
+}
+
+#game-footer>a{
+    @apply text-gray-200 hover:text-gray-300;
 }

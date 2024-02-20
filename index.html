@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f9fafb">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="manifest" href="/manifest.json">
     <title>PWA - Example</title>
 </head>
 
-<body class="w-screen h-screen bg-gray-50 flex flex-col space-y-1 justify-between items-center p-5">
-
-    <h1 class="text-2xl font-bold text-center text-blue-900">Tic-Tac-Toe</h1>
-
-    <div class="flex flex-col items-center space-y-2">
-        <h2 id="game-state"></h2>
-        <button id="start-btn" class="rounded border px-2 border-blue-900 font-bold bg-blue-50 text-blue-700 hover:bg-blue-100">Start game</button>
+<body>
+    <div id="game-header">
+        <h1>Tic-Tac-Toe</h1>
     </div>
 
-    <div class="w-full aspect-square border rounded grid grid-cols-3 max-w-[500px] max-h-[500px]" id="game"></div>
+    <div id="game-body">
+        <div id="game-status">
+            <h2></h2>
+            <button>Start game</button>
+        </div>
+        <div id="game-board">
 
-    <a href="https://github.com/gknyihar/pwa-example" class="text-gray-200 hover:text-gray-300">pwa-example @ GitHub</a>
+        </div>
+    </div>
+
+    <div id="game-footer">
+        <a href="https://github.com/gknyihar/pwa-example">pwa-example @ GitHub</a>
+    </div>
 </body>
 </html>
