@@ -14,6 +14,10 @@ body{
     @apply w-full flex flex-row justify-between items-center;
 }
 
+#game-header>span{
+    @apply w-8 invisible;
+}
+
 #game-header>button{
     @apply w-8 h-8 rounded border border-blue-900 bg-blue-100 hover:bg-blue-200 bg-center bg-no-repeat;
     background-image: url("../img/download.svg");
