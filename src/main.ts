@@ -4,7 +4,7 @@ import Game from './game';
 import {registerInstallButton, registerServiceWorker} from "./pwa";
 
 registerServiceWorker();
-registerInstallButton($('#game-header>button').hide());
+registerInstallButton($('#game-header>button'));
 
 $(function(){
     new Game();

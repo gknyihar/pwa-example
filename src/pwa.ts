@@ -18,7 +18,7 @@ export function registerInstallButton(button:JQuery){
     window.addEventListener("beforeinstallprompt", function(event){
         event.preventDefault();
         installPrompt = event;
-        button.show();
+        button.removeClass('invisible');
     })
 
     button.on("click", async () => {
@@ -32,7 +32,7 @@ export function registerInstallButton(button:JQuery){
 
     function disableInAppInstallPrompt() {
         installPrompt = null;
-        button.hide()
+        button.addClass('visible');
     }
 
 }
