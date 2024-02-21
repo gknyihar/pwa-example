@@ -1,17 +1,13 @@
 import '../resources/css/app.css'
 import * as $ from 'jquery'
 import Game from './game';
+import {registerInstallButton, registerServiceWorker} from "./pwa";
+
+registerServiceWorker();
+registerInstallButton($('#game-header>button').hide());
 
 $(function(){
     new Game();
 });
 
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').then(registration => {
-            console.log('SW registered: ', registration);
-        }).catch(registrationError => {
-            console.log('SW registration failed: ', registrationError);
-        });
-    });
-}
+

@@ -10,12 +10,22 @@ body{
     @apply text-2xl font-bold text-center text-blue-900;
 }
 
+#game-header{
+    @apply w-full flex flex-row justify-between items-center;
+}
+
+#game-header>button{
+    @apply w-8 h-8 rounded border border-blue-900 bg-blue-100 hover:bg-blue-200 bg-center bg-no-repeat;
+    background-image: url("../img/download.svg");
+    background-size: 70%;
+}
+
 #game-status{
     @apply flex items-center justify-center space-x-2;
 }
 
 #game-status>button{
-    @apply rounded border px-2 border-blue-900 font-bold bg-blue-50 text-blue-700 hover:bg-blue-100;
+    @apply rounded border px-2 border-blue-900 font-bold bg-blue-50 text-blue-900 hover:bg-blue-100;
 }
 
 #game-body{
@@ -35,13 +45,21 @@ body{
     @apply bg-gray-100;
 }
 
+#game-board.player-x div.block-empty{
+    @apply hover:bg-blue-50;
+}
+
+#game-board.player-o div.block-empty{
+    @apply hover:bg-red-50;
+}
+
 .block-x{
-    @apply bg-blue-50;
+    @apply bg-blue-100;
     background-image: url("../img/x.svg");
 }
 
 .block-o{
-    @apply bg-red-50;
+    @apply bg-red-100;
     background-image: url("../img/o.svg");
 }
 

@@ -75,9 +75,11 @@ export default class Game {
     }
 
     renderStatus() {
+        this.gameBoard.removeClass();
         if (this.winner === undefined) {
             this.gameButton.hide();
             this.gameStatus.html(`${this.currentPlayer.name}'s turn...`);
+            this.gameBoard.addClass(this.currentPlayer === this.player1 ? 'player-x' : 'player-o')
         } else if (this.winner === null) {
             this.gameStatus.html(`Draw`);
             this.gameButton.html("New game").show();
